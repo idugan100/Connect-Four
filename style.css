@@ -1,0 +1,22 @@
+.board{
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    align-items: center;
+  
+}.row{
+    display: flex;
+}
+.perimeter{
+    border: 10px solid blue;
+    background-color: blue;
+}
+.location{
+    height:50px;
+    width:50px;
+   
+    margin:1px;
+    border-radius: 50%;
+    background-color: white;
+}
