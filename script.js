@@ -1,5 +1,24 @@
 let turn="red";
 let playColumn=0;
+let board =[[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0]]
+/*[column][row] 0,0 is the bottom right corner*/
+
+
+function dropToken(){
+    if(board[playColumn][5]!=0){
+        return null;   
+    }
+    else{
+        for(let i=0;i<6;i++){
+            if(board[playColumn][i]==0){
+                board[playColumn][i]=turn;
+                break;  
+            }
+            console.log(i);
+        }
+        return null;
+    }
+}
 
 const drops=document.querySelectorAll(".drop");
 drops.forEach(drop => {
@@ -28,6 +47,7 @@ function leaveHover(token){
 }
 function clickDrop(token){
     playColumn=token.getAttribute("id");
+    dropToken();
     if(turn=="yellow"){
         turn="red";
         token.setAttribute("style","background-color:red");  
@@ -38,4 +58,5 @@ function clickDrop(token){
     }
   
 }    
+
 
