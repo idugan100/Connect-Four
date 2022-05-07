@@ -6,17 +6,23 @@ let board =[[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0
 
 function dropToken(){
     if(board[playColumn][5]!=0){
-        return null;   
+        console.log("column full");
+        return false;   
     }
     else{
+        
         for(let i=0;i<6;i++){
+            console.log("iteration "+i);
             if(board[playColumn][i]==0){
                 board[playColumn][i]=turn;
-                break;  
+                console.log( "putting token at "+i);
+                updateBoard();
+                return true;
+                  
             }
-            console.log(i);
+            
         }
-        return null;
+        
     }
 }
 
@@ -47,16 +53,38 @@ function leaveHover(token){
 }
 function clickDrop(token){
     playColumn=token.getAttribute("id");
-    dropToken();
-    if(turn=="yellow"){
-        turn="red";
-        token.setAttribute("style","background-color:red");  
-    }
-    else{
-        turn="yellow";
-        token.setAttribute("style","background-color:yellow");  
+    if(dropToken()==true){
+        
+        if(turn=="yellow"){
+            turn="red";
+            token.setAttribute("style","background-color:red");  
+        }
+        else{
+            turn="yellow";
+            token.setAttribute("style","background-color:yellow");  
+        }
     }
   
-}    
+}  
+function updateBoard(){
+    for(let i=0;i<7;i++){
+        for(let j=0;j<6;j++){
+            let box=".location 1"+String(i)+" "+String(j);
+            console.log("update")
+            console.log(box);
+            let selector=document.querySelector(".location ten zero");
+            if(board[i][j]=="red"){
+                selector.setAttribute("style","background-color:red;")
+
+            }
+            else if(board[i][j]=="yellow"){
+
+            }
+
+        }
+    }
+    
+
+}  
 
 
