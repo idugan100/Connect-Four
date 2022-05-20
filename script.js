@@ -33,9 +33,13 @@ drops.forEach(drop => {
     drop.addEventListener("mousedown",()=>clickDrop(drop))
     
 });
-let boardStates = document.querySelectorAll(".location")
+let boardStates = document.querySelectorAll(".location") /* in in DOM order*/
 boardStates[8].setAttribute("style","background-color:green;")
+function updateBoard(){
+    /*iterate through board arry
+    if !=0 but =="red" || =="yellow" then convert i and j to the dom code to update the color (5-Row)*7+Col=dom*/
 
+}
 
 function hoverOver(token){
     if (turn=="yellow"){
