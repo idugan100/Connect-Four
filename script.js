@@ -1,6 +1,6 @@
 let turn="red";
 let playColumn=0;
-let board =[[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0]]
+let board=[[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0]]
 /*[column][row] 0,0 is the bottom right corner*/
 
 
@@ -16,7 +16,7 @@ function dropToken(){
             if(board[playColumn][i]==0){
                 board[playColumn][i]=turn;
                 console.log( "putting token at "+i);
-                updateBoard();
+                
                 return true;
                   
             }
@@ -33,6 +33,8 @@ drops.forEach(drop => {
     drop.addEventListener("mousedown",()=>clickDrop(drop))
     
 });
+let boardStates = document.querySelectorAll(".location")
+boardStates[8].setAttribute("style","background-color:green;")
 
 
 function hoverOver(token){
@@ -65,26 +67,6 @@ function clickDrop(token){
         }
     }
   
-}  
-function updateBoard(){
-    for(let i=0;i<7;i++){
-        for(let j=0;j<6;j++){
-            let box=".location 1"+String(i)+" "+String(j);
-            console.log("update")
-            console.log(box);
-            let selector=document.querySelector(".location ten zero");
-            if(board[i][j]=="red"){
-                selector.setAttribute("style","background-color:red;")
-
-            }
-            else if(board[i][j]=="yellow"){
-
-            }
-
-        }
-    }
-    
-
 }  
 
 
