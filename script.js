@@ -34,7 +34,7 @@ drops.forEach(drop => {
     
 });
 let boardStates = document.querySelectorAll(".location") /* in in DOM order*/
-boardStates[8].setAttribute("style","background-color:green;")
+
 function updateBoard(){
     for(let i=0;i<7;i++){
         for(let j=0;j<6;j++){
