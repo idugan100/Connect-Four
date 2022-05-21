@@ -16,7 +16,7 @@ function dropToken(){
             if(board[playColumn][i]==0){
                 board[playColumn][i]=turn;
                 console.log( "putting token at "+i);
-                
+                updateBoard();
                 return true;
                   
             }
@@ -36,7 +36,20 @@ drops.forEach(drop => {
 let boardStates = document.querySelectorAll(".location") /* in in DOM order*/
 boardStates[8].setAttribute("style","background-color:green;")
 function updateBoard(){
-    /*iterate through board arry
+    for(let i=0;i<7;i++){
+        for(let j=0;j<6;j++){
+            let domNumber= (5-j)*7+i;
+            if (board[i][j]=="red"){
+                boardStates[domNumber].setAttribute("style","background-color:red;");
+
+            }
+            if(board[i][j]=="yellow"){
+                boardStates[domNumber].setAttribute("style","background-color:yellow;")
+
+            }
+        }
+    }
+    /*iterate through board array
     if !=0 but =="red" || =="yellow" then convert i and j to the dom code to update the color (5-Row)*7+Col=dom*/
 
 }
