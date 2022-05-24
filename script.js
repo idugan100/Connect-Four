@@ -34,7 +34,7 @@ function reset(){
     console.log("reset reached")
     updateBoard()
 }
-const resetButton=document.querySelector(".reset")
+const resetButton=document.querySelector("#reset")
 resetButton.addEventListener("click",()=>reset())
 const drops=document.querySelectorAll(".drop");
 drops.forEach(drop => {
