@@ -12,11 +12,11 @@ function dropToken(){
     else{
         
         for(let i=0;i<6;i++){
-            console.log("iteration "+i);
             if(board[playColumn][i]==0){
                 board[playColumn][i]=turn;
-                console.log( "putting token at "+i);
+            
                 updateBoard();
+                winCheck();
                 return true;
                   
             }
@@ -33,6 +33,17 @@ function reset(){
     }
     console.log("reset reached")
     updateBoard()
+}
+
+function winCheck(){
+    /* horizontal win check */
+    for(let i=0;i<4;i++){
+        for(let j=0;j<6;j++){
+            if(board[i][j]==board[i+1][j] && board[i][j]==board[i+2][j] && board[i][j]==board[i+3][j] && board[i][j]!=0){
+                console.log("horizontal win")
+            }
+        }
+    }
 }
 const resetButton=document.querySelector("#reset")
 resetButton.addEventListener("click",()=>reset())
