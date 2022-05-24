@@ -25,7 +25,17 @@ function dropToken(){
         
     }
 }
-
+function reset(){
+    for(let i=0;i<7;i++){
+        for(let j=0;j<6;j++){
+            board[i][j]=0;
+        }
+    }
+    console.log("reset reached")
+    updateBoard()
+}
+const resetButton=document.querySelector(".reset")
+resetButton.addEventListener("click",()=>reset())
 const drops=document.querySelectorAll(".drop");
 drops.forEach(drop => {
     drop.addEventListener("mouseover",()=>hoverOver(drop))
@@ -46,6 +56,9 @@ function updateBoard(){
             if(board[i][j]=="yellow"){
                 boardStates[domNumber].setAttribute("style","background-color:yellow;")
 
+            }
+            if(board[i][j]==0){
+                boardStates[domNumber].setAttribute("style","background-color:white;")
             }
         }
     }

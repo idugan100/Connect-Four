@@ -26,3 +26,9 @@
     background-color: gray;
     margin:3px;   
 }
+#reset{
+    background-color: aquamarine;
+    color:black;
+    height:40px;
+    width:60px;
+}
