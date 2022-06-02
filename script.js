@@ -16,7 +16,7 @@ function dropToken(){
                 board[playColumn][i]=turn;
             
                 updateBoard();
-                winCheck();
+                winCheck(turn);
                 return true;
                   
             }
@@ -35,12 +35,36 @@ function reset(){
     updateBoard()
 }
 
-function winCheck(){
+function winCheck(color){
     /* horizontal win check */
     for(let i=0;i<4;i++){
         for(let j=0;j<6;j++){
-            if(board[i][j]==board[i+1][j] && board[i][j]==board[i+2][j] && board[i][j]==board[i+3][j] && board[i][j]!=0){
+            if(board[i][j]==board[i+1][j] && board[i][j]==board[i+2][j] && board[i][j]==board[i+3][j] && board[i][j]==color){
                 console.log("horizontal win")
+            }
+        }
+    }
+    /*vertical win check*/
+    for(let i=0;i<7;i++){
+        for(let j=0;j<3;j++){
+            if(board[i][j]==board[i][j+1] && board[i][j]==board[i][j+2] && board[i][j]==board[i][j+3] && board[i][j] ==color){
+                console.log("vertical win")
+            }
+        }
+    }
+    /* fupwards diagonal win check*/
+    for(let i=0;i<4;i++){
+        for(let j=0;j<3;j++){
+            if(board[i][j]==board[i+1][j+1] && board[i][j]==board[i+2][j+2] && board[i][j]==board[i+3][j+3] && board[i][j] ==color){
+                console.log("forward diagonal win")
+            }
+        }
+    }
+    /*downwards diagonal win check*/
+    for(let i=0;i<4;i++){
+        for(let j=5;j>2;j--){
+            if(board[i][j]==board[i+1][j-1] && board[i][j]==board[i+2][j-2] && board[i][j]==board[i+3][j-3] && board[i][j] ==color){
+                console.log("backwards diagonal win")
             }
         }
     }
