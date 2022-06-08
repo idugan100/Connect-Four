@@ -6,8 +6,7 @@ let board=[[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0]
 
 function dropToken(){
     if(board[playColumn][5]!=0 || winCheck("red")==true || winCheck("yellow")){
-        console.log("column full");
-
+        
         return false;   
     }
     else{
@@ -37,6 +36,8 @@ function reset(){
     }
     console.log("reset reached")
     updateBoard()
+    outCome.textContent=null
+    outCome.setAttribute("style","border:0px;")
 }
 
 function winDiv(){
