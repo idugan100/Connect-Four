@@ -5,8 +5,9 @@ let board=[[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0]
 
 
 function dropToken(){
-    if(board[playColumn][5]!=0){
+    if(board[playColumn][5]!=0 || winCheck("red")==true || winCheck("yellow")){
         console.log("column full");
+
         return false;   
     }
     else{
@@ -17,6 +18,9 @@ function dropToken(){
             
                 updateBoard();
                 winCheck(turn);
+                if(winCheck(turn)==true){
+                    winDiv()
+                }
                 return true;
                   
             }
@@ -35,12 +39,19 @@ function reset(){
     updateBoard()
 }
 
+function winDiv(){
+    outCome.setAttribute("style","border:5px blue solid;")
+    outCome.textContent=turn+" wins!"
+}
+let outCome=document.querySelector("#outcome");
 function winCheck(color){
     /* horizontal win check */
     for(let i=0;i<4;i++){
         for(let j=0;j<6;j++){
             if(board[i][j]==board[i+1][j] && board[i][j]==board[i+2][j] && board[i][j]==board[i+3][j] && board[i][j]==color){
-                console.log("horizontal win")
+                
+                return true
+
             }
         }
     }
@@ -48,7 +59,9 @@ function winCheck(color){
     for(let i=0;i<7;i++){
         for(let j=0;j<3;j++){
             if(board[i][j]==board[i][j+1] && board[i][j]==board[i][j+2] && board[i][j]==board[i][j+3] && board[i][j] ==color){
-                console.log("vertical win")
+                
+                return true
+
             }
         }
     }
@@ -56,7 +69,9 @@ function winCheck(color){
     for(let i=0;i<4;i++){
         for(let j=0;j<3;j++){
             if(board[i][j]==board[i+1][j+1] && board[i][j]==board[i+2][j+2] && board[i][j]==board[i+3][j+3] && board[i][j] ==color){
-                console.log("forward diagonal win")
+                
+                return true
+
             }
         }
     }
@@ -64,10 +79,13 @@ function winCheck(color){
     for(let i=0;i<4;i++){
         for(let j=5;j>2;j--){
             if(board[i][j]==board[i+1][j-1] && board[i][j]==board[i+2][j-2] && board[i][j]==board[i+3][j-3] && board[i][j] ==color){
-                console.log("backwards diagonal win")
+                
+                return true
+
             }
         }
     }
+    return false
 }
 const resetButton=document.querySelector("#reset")
 resetButton.addEventListener("click",()=>reset())
