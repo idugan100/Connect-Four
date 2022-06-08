@@ -27,10 +27,11 @@
     margin:3px;   
 }
 #reset{
-    background-color: aquamarine;
-    color:black;
-    height:40px;
-    width:60px;
+    background-color: blue;
+    color:white;
+    width:30vw;
+    font-size:24px;
+    
 }
 .container{
     display: flex;
@@ -44,4 +45,21 @@
     font-size: 24px;
     
     padding: 8px;
+}
+
+nav#header{
+    display: flex;
+    justify-content: space-between;
+    border:8px blue solid;
+    margin:0px;
+    padding: 10px;
+}
+.navoption{
+    margin:10px;
+}
+
+#resetContainer{
+    display: flex;
+    justify-content: center;
+    margin:10px;
 }
