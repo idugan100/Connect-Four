@@ -1,3 +1,7 @@
+body{
+    padding:0 px;
+    margin:0px;
+}
 .board{
     display: flex;
     flex-direction: column;
@@ -5,7 +9,8 @@
     justify-content: center;
     align-items: center;
   
-}.row{
+}
+.row{
     display: flex;
 }
 .perimeter{
@@ -25,6 +30,12 @@
     width:50px;
     background-color: gray;
     margin:3px;   
+}
+#title{
+    color:white;
+    font-size: 24px;
+    font-weight: bold;
+    
 }
 #reset{
     background-color: blue;
@@ -50,12 +61,20 @@
 nav#header{
     display: flex;
     justify-content: space-between;
-    border:8px blue solid;
+    align-items: center;
+    background-color: blue;
     margin:0px;
     padding: 10px;
+    height: 60px;
 }
-.navoption{
+button.navOption{
     margin:10px;
+    background-color:blue;
+    color:white;
+    font-size: 18px;
+    border: none;
+    
+
 }
 
 #resetContainer{
