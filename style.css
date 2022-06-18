@@ -13,24 +13,28 @@ body{
 .row{
     display: flex;
 }
+body{
+    background-color: rgb(235, 220, 181);
+}
 .perimeter{
-    border: 10px solid blue;
-    background-color: blue;
+    border: 10px solid rgb(50,113,168);
+    background-color: rgb(50,113,168);
 }
 .location{
-    height:75px;
-    width:75px;
+    height:5vw;
+    width:5vw;
    
     margin:3px;
     border-radius: 50%;
     background-color: white;
 }
 .drop{
-    height: 75px;
-    width:75px;
+    height: 5vw;
+    width:5vw;
     background-color: gray;
     margin:3px;   
 }
+
 #title{
     color:white;
     font-size: 24px;
@@ -38,10 +42,10 @@ body{
     
 }
 #reset{
-    background-color: blue;
+    background-color: rgb(50,113,168);
     color:white;
-    width:30vw;
-    font-size:24px;
+    width:38.5vw;
+    font-size:30px;
     
 }
 .container{
@@ -62,14 +66,14 @@ nav#header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: blue;
+    background-color:rgb(50,113,168);
     margin:0px;
     padding: 10px;
     height: 60px;
 }
 button.navOption{
     margin:10px;
-    background-color:blue;
+    background-color:rgb(50,113,168);
     color:white;
     font-size: 18px;
     border: none;

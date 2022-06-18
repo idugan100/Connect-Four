@@ -41,8 +41,18 @@ function reset(){
 }
 
 function winDiv(){
-    outCome.setAttribute("style","border:5px blue solid;")
-    outCome.textContent=turn+" wins!"
+    
+    
+    if(winCheck("red")==true){
+        outCome.setAttribute("style","color:red;background-color:rgb(50,113,168);font-weight:bolder;");
+    }
+    else {
+        outCome.setAttribute("style","color:yellow;background-color:rgb(50,113,168);font-weight:bolder;");
+
+    }
+    let tempTurn=turn.charAt(0).toUpperCase()+turn.slice(1)
+    
+    outCome.textContent=tempTurn+" wins!"
 }
 let outCome=document.querySelector("#outcome");
 function winCheck(color){
