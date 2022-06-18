@@ -1,6 +1,7 @@
 let turn="red";
 let playColumn=0;
 let board=[[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0]]
+let winArray=[[null,null][null,null],[null,null],[null,null]]
 /*[column][row] 0,0 is the bottom right corner*/
 
 
@@ -44,10 +45,10 @@ function winDiv(){
     
     
     if(winCheck("red")==true){
-        outCome.setAttribute("style","color:red;background-color:rgb(50,113,168);font-weight:bolder;");
+        outCome.setAttribute("style","color:red;background-color:gray;font-weight:bolder; border:10px rgb(50,113,168) solid;");
     }
     else {
-        outCome.setAttribute("style","color:yellow;background-color:rgb(50,113,168);font-weight:bolder;");
+        outCome.setAttribute("style","color:yellow;border:10px rgb(50,113,168) solid;font-weight:bolder; background-color:gray;");
 
     }
     let tempTurn=turn.charAt(0).toUpperCase()+turn.slice(1)
