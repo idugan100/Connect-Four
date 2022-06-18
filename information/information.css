@@ -1,0 +1,10 @@
+#infoContainer{
+    display: flex;
+    justify-content: space-around;
+}
+.infoBox{
+    border:10px red solid;
+    border-radius: 5px;
+    padding:5px;
+    
+}
