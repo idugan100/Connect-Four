@@ -26,10 +26,10 @@
     <div id="subheader">Have something you'd like to share? Want to contact the creator of this Website? Send us a message here!</div>
    
     <form action="example.com/path" method="post">
-        <label for="name_full">Full Name</label>
+        <label for="name_full" required>*Full Name</label>
         <input type="text" id="name_full" name="name_full">
         <br><br>
-        <label for="email">Email Adress</label>
+        <label for="email" required>*Email Adress</label>
         <input type="email" name="email" id="email">
         <br><br>
         <select name="category" id="category">
@@ -46,7 +46,8 @@
         <textarea name="comments" id="" cols="30" rows="10"></textarea>
         <br><br>
         <button type="reset">Reset</button>
-        <button type="submit">Submit</button>        
+        <button type="submit">Submit</button>   
+        <div>* indicates required field</div>    
        
     </form>
   
