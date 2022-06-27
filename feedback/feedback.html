@@ -11,17 +11,45 @@
 </head>
 <body>
     <nav id="header">
-        <div id="title">Connect Four!</div>
-        <div>
+    <div id="title">Connect Four!</div>
+     <div>   
         <a href="../index.html"><button id="home" class="navOption">Home</button></a>
         <a href="../feedback/feedback.html"><button id="feedback" class="navOption">Feeback</button></a>
         <a href="../login/login.html"><button id="login" class="navOption">Login</button></a>
         <a href="../information/information.html"><button id="information" class="navOption">Information</button></a>
         <a href="../settings/settings.html"><button id="settings" class="navOption">Settings</button></a>
-        </div>
+        
+    </div>
+        
         </nav>
 
-    <h1>Feedback</h1>
+    <div id="subheader">Have something you'd like to share? Want to contact the creator of this Website? Send us a message here!</div>
+   
+    <form action="example.com/path" method="post">
+        <label for="name_full">Full Name</label>
+        <input type="text" id="name_full" name="name_full">
+        <br><br>
+        <label for="email">Email Adress</label>
+        <input type="email" name="email" id="email">
+        <br><br>
+        <select name="category" id="category">
+            <option value="bug">I found a bug</option>
+            <option value="article">I'd like to post an article</option>
+            <option value="contact">I'd like to contact the site creators</option>
+            <option value="contribute">I would like to contribute to the site development</option>
+            <option value="general" selected>I have some general feedback</option>
+            <option value="other">Other</option>
+        </select>
+        <br><br>
+        <div>Write feedback here:</div>
+        
+        <textarea name="comments" id="" cols="30" rows="10"></textarea>
+        <br><br>
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>        
+       
+    </form>
+  
     
 </body>
 </html>
