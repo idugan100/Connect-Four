@@ -1,31 +1,11 @@
-#infoContainer{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    
+#infoBox{
+    margin-top: 10vh;
 }
-.infoBox{
-    border:20px white solid;
-    border-radius: 20px;
-    padding:5px;
-    margin: 20px;
-    width:25vw;
-    height: 66vh;
-    color:rgb(50,113,168);
-    font-weight: bold;
-    font-size: 24px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.accordion-body{
+    font-size: 1.5rem;
+}
+.buttonText{
+    font-size: 2.5rem;
     
 }
 
-.infoboxheader{
-    margin-top:15px;
-    font-size: 36px;
-}
-li{
-
-    list-style: none;
-    margin:15px;
-}
