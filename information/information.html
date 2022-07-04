@@ -7,9 +7,11 @@
     <title>Information</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="information.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
     <script src="information.js" defer></script>
 </head>
 <body>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <nav id="header">
         <div id="title">Connect Four!</div>
         <div>
@@ -21,25 +23,56 @@
         </div>
         </nav>
     <h1>Information</h1>
-    <div id="infoContainer">
+    <div class="container">
+        <div class="col col-8-md">
+            <div class="acordian">
 
-    <div class="infoBox" id="timeline"> <div class="infoboxheader">History</div><ul>
-        <li>1908: A well know board game author named Robbie Bell wrote a book about a game called 'Four Balls.'</li>
-        <li>1946: Theodore Duncan pattents a device for token stacking that is used in modern versions of Connect Four.</li>
-        <li>1968: A game company called Funtastic designs a game called 'Score Four' played with poles and wodden disks that would slip over the poles.</li>
-        <li>1974: </li>
-        <li></li>
-    </ul></div>
-    <div class="infoBox"> <div class="infoboxheader">Rules</div><ul>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul></div>
-    <div class="infoBox"> <div class="infoboxheader">Strategy</div><ul>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul></div>
+                <div class="acordion-item">
+                    <h2 class="accordion-header" id="historyBoxHeader">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#historyBox" >
+                          History of Connect Four
+                        </button>
+                      </h2>
+                      <div id="historyBox" class="accordion-collapse collapse" >
+                        <div class="accordion-body">
+                            Connect 4 or Four-in-a-Row has its roots in Tic-Tac-Toe, a simple three in a row pencil and paper game. The object of the game is to get four pieces in a row. Four-In-A-Row, 
+                            also, adds the element of restricted placement by requiring the players to "drop" the pieces vertically down the board. In America, this game was popularized under the name Connect 
+                            Four. The name “Connect Four” was first coined by Milton Bradley Company in 1974. The company was founded by Milton Bradley in Springfield, Massachusetts in 1860. The company is known for its contributions in the board game and video game industries.
+                        </div>
+                </div>
+
+                <div class="acordion-item">
+                    <h2 class="accordion-header" id="rulesBoxheader">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#rulesBox">
+                            Rules of Connect Four
+                        </button>
+                    </h2>
+                    <div id="rulesBox" class="accordion-collapse collapse">
+                        <div class="accordion-body"> hello</div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="strategyBoxHeader">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#strategyBox">
+                            Connect Four Strategy
+                        </button>
+                    </h2>
+                    <div id="strategyBox" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            stratgems
+                        </div>
+                    </div>
+                </div>
+               
+
+                
+        
+
+
+    </div></div>
+
+
 
     </div>
     
