@@ -6,6 +6,15 @@ label{
     align-items: center;
     
 }
-.hello{
-    padding-right: 10px;
+.feature{
+    font-size: 3rem;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    
+}
+#con4footer{
+    width: 95vw;
+    height: auto;
+   
 }

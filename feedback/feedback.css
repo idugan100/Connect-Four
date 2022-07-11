@@ -1,6 +1,77 @@
-form{
-    background-color:skyblue;
+body{
+    }
+#bodyWrapper{
+    height: 94vh;
+    background-color: white;
+    
 }
-input:invalid{
-    border:5px solid red;
+.backgroundBox{
+    background-image: url(../img/connect-four\(2\).jpeg);
+    height: 94vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
+
+.textBar{
+    background-color: white;
+    opacity: .85;
+    font-size: 3rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+#feedbackheader{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.feedbackWrapper{
+    display: flex;
+    align-items: center;
+    background-color: rgb(235, 220, 181);
+}
+
+.photoSection{
+  
+
+    height: 30vh;
+    margin: 10px;
+  
+
+  
+}
+.formWrapper{
+    
+    display: flex;
+
+}
+
+#greeting{
+    display: flex;
+    flex-direction: row;
+}
+#greetingmessage{
+    align-self: end;
+    font-size: 1.7rem;
+}
+.buttonWrapper{
+    display: flex;
+    justify-content: center;
+}
+.formSplitter{
+    width:27vw;
+    margin:10px;
+}
+@media only screen and (max-width: 775px) {
+    .backgroundBox{
+        
+        height: 50vh;
+    }
+    .photoSection{
+        width: 120vw;
+    }
+  }
